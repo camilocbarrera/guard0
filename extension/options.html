@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Guard0 – Options</title>
+		<link rel="stylesheet" href="options.css" />
+	</head>
+	<body>
+		<main class="wrap">
+			<h1>Guard0</h1>
+			<p>Provide your Groq API key and choose defaults.</p>
+			<label class="row">
+				<span>Enable protection</span>
+				<input id="enabled" type="checkbox" />
+			</label>
+			<label class="col">
+				<span>Groq API Key</span>
+				<input id="apiKey" type="password" placeholder="gsk_..." />
+			</label>
+			<label class="col">
+				<span>Allowlist domains (one per line, e.g., google.com)</span>
+				<textarea id="allowlist" rows="6" placeholder="google.com
+wikipedia.org"></textarea>
+			</label>
+			<div class="actions">
+				<button id="save">Save</button>
+			</div>
+			<p class="hint">Analyses run once per origin per browser session. Allowlisted domains are skipped.</p>
+		</main>
+		<script src="options.js"></script>
+	</body>
+</html>
